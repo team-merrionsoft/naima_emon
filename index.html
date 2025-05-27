@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E & N | Together Forever</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="min-h-screen">
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+    
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="hearts-container"></div>
+    
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-12 bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo text-3xl font-bold text-pink-600">
+                <span class="text-4xl">E</span>
+                <span class="text-pink-400">&</span>
+                <span class="text-4xl">N</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-pink-600 hover:text-pink-400 font-medium">Home</a>
+                <a href="#story" class="nav-link text-gray-700 hover:text-pink-400 font-medium">Our Story</a>
+                <a href="#frame" class="nav-link text-gray-700 hover:text-pink-400 font-medium">Us</a>
+                <a href="#letter" class="nav-link text-gray-700 hover:text-pink-400 font-medium">Letter</a>
+            </nav>
+            <button class="md:hidden text-pink-600 text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white absolute top-full left-0 w-full shadow-lg py-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4 px-4">
+                <a href="#home" class="text-pink-600 hover:text-pink-400 font-medium">Home</a>
+                <a href="#story" class="text-gray-700 hover:text-pink-400 font-medium">Our Story</a>
+                <a href="#frame" class="text-gray-700 hover:text-pink-400 font-medium">Us</a>
+                <a href="#letter" class="text-gray-700 hover:text-pink-400 font-medium">Letter</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="premium-section flex items-center justify-center" id="Home">
+        <!-- Animated Background -->
+        <div class="animated-bg"></div>
+        
+        <!-- Color Bubbles -->
+        <div class="color-bubble bg-pink-500 w-64 h-64" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="color-bubble bg-purple-500 w-80 h-80" style="top: 60%; left: 70%; animation-delay: 3s;"></div>
+        <div class="color-bubble bg-blue-400 w-72 h-72" style="top: 30%; left: 50%; animation-delay: 6s;"></div>
+        <div class="color-bubble bg-yellow-400 w-60 h-60" style="top: 70%; left: 30%; animation-delay: 9s;"></div>
+        
+        <div class="bg-overlay"></div>
+        
+        <!-- Floating Diamonds -->
+        <div class="floating-diamonds" id="diamonds-container"></div>
+        
+        <!-- Floating Hearts -->
+        <div id="hearts-container"></div>
+        
+        <!-- Content Container -->
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Logo-style text with animation -->
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-logo text-white mb-8 glow-text">
+                    <span class="text-gradient inline-block transform transition duration-500 hover:scale-110">Emon</span> 
+                    <span class="text-white mx-2 md:mx-4 text-4xl md:text-5xl animate-pulse">&</span> 
+                    <span class="text-gradient inline-block transform transition duration-500 hover:scale-110">Naima</span>
+                </h2>
+                
+                <!-- Poetic line -->
+                <p class="text-xl md:text-2xl text-white mb-12 leading-relaxed" style="font-family: 'Great Vibes', cursive;">
+                  You and I, a story still being told,<br>
+                With every smile, our love unfolds.
+                                        </p>
+                
+                <!-- Buttons container -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <!-- Read Letter Button -->
+                    <a href="#letter">
+                         <button class="btn-premium px-10 py-4 rounded-full text-white text-lg font-medium bg-gradient-to-r from-pink-500/30 to-purple-500/30">
+                        <i class="fas fa-envelope-open-text mr-2 #letter"></i>
+                        Read Letter
+                        <span class="sparkle" style="top: 20%; left: 20%; animation-delay: 0.3s;"></span>
+                        <span class="sparkle" style="top: 60%; left: 70%; animation-delay: 0.7s;"></span>
+                    </button>
+                    </a>
+                   
+                    
+                    <!-- Memories Button -->
+                    <a href="#story">
+                        <button class="btn-premium px-10 py-4 rounded-full text-white text-lg font-medium bg-gradient-to-r from-purple-500/30 to-blue-500/30">
+                        <i class="fas fa-images mr-2"></i>
+                        Our Story
+                        <span class="sparkle" style="top: 30%; left: 50%; animation-delay: 0.5s;"></span>
+                        <span class="sparkle" style="top: 70%; left: 30%; animation-delay: 0.9s;"></span>
+                    </button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Our Story Section -->
+    <section id="story" class="py-20 px-4 md:px-12 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+                Our <span class="text-pink-600">Timeline</span>
+            </h2>
+            
+            <div class="relative pl-8 md:pl-16 timeline max-w-3xl mx-auto">
+                <div class="relative mb-12 timeline-item pl-8">
+                    <div class="bg-gradient-to-r from-pink-50 to-white p-8 rounded-xl shadow-sm border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-bold text-pink-600 mb-2">First Meet</h3>
+                        <p class="text-gray-600">The day our eyes met across the room, time seemed to stand still. Emon knew there was something special about Naima from that very moment.</p>
+                        <div class="text-sm text-pink-400 mt-2">May 15, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="relative mb-12 timeline-item pl-8">
+                    <div class="bg-gradient-to-r from-pink-50 to-white p-8 rounded-xl shadow-sm border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-bold text-pink-600 mb-2">First Date</h3>
+                        <p class="text-gray-600">Coffee turned into dinner, which turned into a walk under the stars. Neither of us wanted the night to end.</p>
+                        <div class="text-sm text-pink-400 mt-2">May 16, 2025</div>
+                    </div>
+                </div>
+                
+                
+                <div class="relative mb-12 timeline-item pl-8">
+                    <div class="bg-gradient-to-r from-pink-50 to-white p-8 rounded-xl shadow-sm border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-bold text-pink-600 mb-2">First Vacation</h3>
+                        <p class="text-gray-600">Exploring new places together only confirmed what we already knew - we're better together.</p>
+                        <div class="text-sm text-pink-400 mt-2">December 2018</div>
+                    </div>
+                </div>
+                
+                <div class="relative timeline-item pl-8">
+                    <div class="bg-gradient-to-r from-pink-50 to-white p-8 rounded-xl shadow-sm border-l-4 border-pink-500">
+                        <h3 class="text-2xl font-bold text-pink-600 mb-2">Today</h3>
+                        <p class="text-gray-600">Every day with you is a new adventure, a new reason to smile, a new memory to cherish.</p>
+                        <div class="text-sm text-pink-400 mt-2">Present</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Photo Frame Section -->
+    <section id="frame" class="py-20 px-4 md:px-12 bg-pink-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+                <span class="text-pink-600">Us</span> Together
+            </h2>
+            
+            <div class="couple-grid">
+                <div class="photo-frame">
+                    <img src="/Emon (2).jpg" 
+                         alt="Emon" 
+                         class="w-full h-auto object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white text-lg italic">"Your hand in mine, my heart in yours"</p>
+                    </div>
+                </div>
+                
+                <div class="photo-frame">
+                    <img src="/Naima.jpg" 
+                         alt="Naima" 
+                         class="w-full h-auto object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white text-lg italic">"Together is my favorite place to be"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Letter Section -->
+    <section id="letter" class="py-20 px-4 md:px-12 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+                My <span class="text-pink-600">Letter</span> To You
+            </h2>
+            
+            <div class="flex justify-center">
+                <div class="letter-box w-80 h-96 cursor-pointer relative" id="letter-box">
+                    <div class="letter-ribbon"></div>
+                    <div class="letter-box-inner">
+                        <div class="letter-box-front">
+                            <div class="letter-seal">
+                                <i class="fas fa-heart text-pink-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-white text-2xl font-bold mb-3">For You</h3>
+                            <p class="text-white/90 text-center text-lg">Click to open my heart</p>
+                            <div class="absolute bottom-6 right-6 text-white/70">
+                                <i class="fas fa-envelope-open-text text-3xl"></i>
+                            </div>
+                        </div>
+                        <div class="letter-box-back">
+                            <div class="letter-content" id="letter-content">
+                                <div class="flex justify-between items-start mb-6">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-pink-600 mb-1">Dear Naima,</h3>
+                                        <p class="text-gray-500 text-sm">May 20, 2025</p>
+                                    </div>
+                                    <div class="text-pink-400">
+                                        <i class="fas fa-heart text-3xl"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-gray-700 space-y-4 text-lg">
+                                    <p>I don’t know exactly how to say this, but I’ll keep it simple  you mean a lot to me. Over time, my feelings for you have grown into something more than just friendship.</p>
+                                                                        
+                                    <p>You’re special to me, and I care about you deeply. I don’t want to lose what we have, but I had to be honest with you.</p>
+                                    
+                                    <p>No matter what, I’ll always be here as your best friend, and someone who truly values you.</p>
+                                    
+                                </div>
+                                
+                                <div class="mt-10">
+                                    <p class="text-2xl font-bold text-pink-600">Forever yours,</p>
+                                    <div class="w-32 h-1 bg-pink-200 my-3"></div>
+                                    <p class="text-gray-700 text-lg">— Emon</p>
+                                    <div class="mt-4 flex space-x-2">
+                                        <i class="fas fa-heart text-pink-400"></i>
+                                        <i class="fas fa-heart text-pink-400"></i>
+                                        <i class="fas fa-heart text-pink-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-4 md:px-12 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="logo text-3xl font-bold text-pink-400 mb-6 md:mb-0">
+                    <span class="text-4xl">E</span>
+                    <span class="text-pink-300">&</span>
+                    <span class="text-4xl">N</span>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-pink-400 text-xl transition-all">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 text-xl transition-all">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-400 text-xl transition-all">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">© 2023 Arian Ahmed Emon . All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mt-1">Made with <i class="fas fa-heart text-pink-400"></i> for you</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
