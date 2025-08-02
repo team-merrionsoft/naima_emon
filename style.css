@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap');
+
+/* Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
 
 :root {
     --primary: #ff4d6d;
@@ -534,4 +540,224 @@ body {
             10% { opacity: 0.8; }
             90% { opacity: 0.8; }
             100% { transform: translateY(-100px) rotate(45deg); opacity: 0; }
+        }
+        
+        .hero-bg {
+            background: linear-gradient(-45deg, #ffb6c1, #ff69b4, #dda0dd, #ffb6c1);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .bubble {
+                width: 12px !important;
+                height: 12px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bubble {
+                width: 8px !important;
+                height: 8px !important;
+            }
+        }
+        .diamond {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            box-shadow: 0 0 15px rgba(221, 160, 221, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .diamond {
+                width: 15px;
+                height: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .diamond {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(255, 192, 203, 0.7);
+            text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+            animation: heart-float 20s infinite ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .heart {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .heart {
+                font-size: 14px;
+            }
+        }
+        .butterfly {
+            position: absolute;
+            font-size: 28px;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+            animation: butterfly-float 25s infinite ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .butterfly {
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .butterfly {
+                font-size: 18px;
+            }
+        }
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 182, 193, 0.4);
+            border-radius: 50% 0 50% 50%;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+            animation: petal-float 15s infinite ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .petal {
+                width: 15px;
+                height: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .petal {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        .glass-button {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+            transition: all 0.3s ease;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(255, 105, 180, 0.3);
+        }
+        .glass-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glass-button:hover::before {
+            opacity: 1;
+        }
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 10px white;
+            animation: sparkle 2s infinite;
+        }
+        .typing-container {
+            border-right: 2px solid rgba(255, 255, 255, 0.75);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .typing-container span {
+            display: inline-block;
+            animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
+        }
+        .floral-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            pointer-events: none;
+        }
+        
+        .floral-border::before,
+        .floral-border::after {
+            content: "✿ ❀ ❁ ❃ ❀ ✿";
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 18px;
+        }
+        
+        .floral-border::before {
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .floral-border::after {
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media (max-width: 768px) {
+            .floral-border::before,
+            .floral-border::after {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .floral-border {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .floral-border::before,
+            .floral-border::after {
+                font-size: 12px;
+            }
         }
