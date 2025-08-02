@@ -8,7 +8,94 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+ <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'script': ['Dancing Script', 'cursive']
+                    },
+                    animation: {
+                        'float': 'float 15s infinite ease-in-out',
+                        'float-slow': 'float 25s infinite ease-in-out',
+                        'float-medium': 'float 20s infinite ease-in-out',
+                        'bubble-float': 'bubble-float 12s infinite ease-in-out',
+                        'diamond-float': 'diamond-float 18s infinite linear',
+                        'heart-float': 'heart-float 20s infinite ease-in-out',
+                        'butterfly-float': 'butterfly-float 25s infinite ease-in-out',
+                        'petal-float': 'petal-float 15s infinite ease-in-out',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'sparkle': 'sparkle 2s infinite',
+                        'fade-in': 'fadeIn 2s ease-in forwards',
+                        'typing': 'typing 4s steps(40, end), blink-caret 1s step-end infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) translateX(0)' },
+                            '25%': { transform: 'translateY(-20px) translateX(10px)' },
+                            '50%': { transform: 'translateY(-10px) translateX(-15px)' },
+                            '75%': { transform: 'translateY(-30px) translateX(5px)' }
+                        },
+                        'bubble-float': {
+                            '0%': { transform: 'translateY(100vh) scale(0.8)', opacity: '0' },
+                            '10%': { opacity: '0.7' },
+                            '90%': { opacity: '0.5' },
+                            '100%': { transform: 'translateY(-100px) scale(1.2)', opacity: '0' }
+                        },
+                        'diamond-float': {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0' },
+                            '10%': { opacity: '0.8' },
+                            '90%': { opacity: '0.6' },
+                            '100%': { transform: 'translateY(-100px) rotate(360deg)', opacity: '0' }
+                        },
+                        'heart-float': {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg) scale(0.5)', opacity: '0' },
+                            '10%': { opacity: '0.8' },
+                            '90%': { opacity: '0.6' },
+                            '100%': { transform: 'translateY(-100px) rotate(360deg) scale(1.2)', opacity: '0' }
+                        },
+                        'butterfly-float': {
+                            '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: '0.7' },
+                            '25%': { transform: 'translate(20px, -30px) rotate(10deg)' },
+                            '50%': { transform: 'translate(-15px, -50px) rotate(-5deg)' },
+                            '75%': { transform: 'translate(10px, -80px) rotate(5deg)' },
+                            '100%': { transform: 'translate(0, -100px) rotate(0deg)', opacity: '0' }
+                        },
+                        'petal-float': {
+                            '0%': { transform: 'translateY(100vh) rotate(0deg)', opacity: '0.8' },
+                            '100%': { transform: 'translateY(-100px) rotate(360deg)', opacity: '0' }
+                        },
+                        glow: {
+                            '0%': { textShadow: '0 0 5px rgba(255, 182, 193, 0.5), 0 0 10px rgba(255, 182, 193, 0.3)' },
+                            '100%': { textShadow: '0 0 15px rgba(255, 182, 193, 0.8), 0 0 25px rgba(255, 182, 193, 0.5)' }
+                        },
+                        sparkle: {
+                            '0%': { opacity: '0.3', transform: 'scale(0.8)' },
+                            '50%': { opacity: '1', transform: 'scale(1.2)' },
+                            '100%': { opacity: '0.3', transform: 'scale(0.8)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        typing: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' }
+                        },
+                        'blink-caret': {
+                            'from, to': { borderColor: 'transparent' },
+                            '50%': { borderColor: 'rgba(255, 255, 255, 0.75)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 <body class="min-h-screen">
     <!-- Background Animation -->
     <div class="bg-animation"></div>
@@ -47,65 +134,70 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="premium-section flex items-center justify-center" id="Home">
-        <!-- Animated Background -->
-        <div class="animated-bg"></div>
+<section class="hero-bg flex items-center justify-center relative">
+        <!-- Floral decorative border -->
+        <div class="floral-border"></div>
         
-        <!-- Color Bubbles -->
-        <div class="color-bubble bg-pink-500 w-64 h-64" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="color-bubble bg-purple-500 w-80 h-80" style="top: 60%; left: 70%; animation-delay: 3s;"></div>
-        <div class="color-bubble bg-blue-400 w-72 h-72" style="top: 30%; left: 50%; animation-delay: 6s;"></div>
-        <div class="color-bubble bg-yellow-400 w-60 h-60" style="top: 70%; left: 30%; animation-delay: 9s;"></div>
+        <!-- Floating bubbles -->
+        <div class="bubble w-16 h-16 top-1/4 left-1/4 animate-bubble-float"></div>
+        <div class="bubble w-24 h-24 top-1/3 right-1/4 animate-bubble-float animation-delay-2000"></div>
+        <div class="bubble w-20 h-20 bottom-1/4 left-1/3 animate-bubble-float animation-delay-4000"></div>
+        <div class="bubble w-12 h-12 bottom-1/3 right-1/3 animate-bubble-float animation-delay-1000"></div>
+        <div class="bubble w-28 h-28 top-1/2 left-1/2 animate-bubble-float animation-delay-3000"></div>
         
-        <div class="bg-overlay"></div>
+        <!-- Floating diamonds -->
+        <div class="diamond top-1/4 right-1/3 animate-diamond-float animation-delay-500"></div>
+        <div class="diamond bottom-1/4 left-1/4 animate-diamond-float animation-delay-1500"></div>
+        <div class="diamond top-1/3 left-1/2 animate-diamond-float animation-delay-2500"></div>
+        <div class="diamond bottom-1/3 right-1/2 animate-diamond-float animation-delay-3500"></div>
         
-        <!-- Floating Diamonds -->
-        <div class="floating-diamonds" id="diamonds-container"></div>
+        <!-- Floating hearts -->
+        <div class="heart top-1/5 left-1/5 animate-heart-float">💖</div>
+        <div class="heart top-2/5 right-1/5 animate-heart-float animation-delay-1000">💕</div>
+        <div class="heart bottom-1/5 left-2/5 animate-heart-float animation-delay-2000">💗</div>
+        <div class="heart bottom-2/5 right-2/5 animate-heart-float animation-delay-3000">💓</div>
         
-        <!-- Floating Hearts -->
-        <div id="hearts-container"></div>
+        <!-- Floating butterflies -->
+        <div class="butterfly top-1/3 left-1/6 animate-butterfly-float">🦋</div>
+        <div class="butterfly top-2/3 right-1/6 animate-butterfly-float animation-delay-1500">🦋</div>
         
-        <!-- Content Container -->
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <!-- Logo-style text with animation -->
-                <h2 class="text-5xl md:text-7xl lg:text-8xl font-logo text-white mb-8 glow-text">
-                    <span class="text-gradient inline-block transform transition duration-500 hover:scale-110">Emon</span> 
-                    <span class="text-white mx-2 md:mx-4 text-4xl md:text-5xl animate-pulse">&</span> 
-                    <span class="text-gradient inline-block transform transition duration-500 hover:scale-110">Naima</span>
-                </h2>
-                
-                <!-- Poetic line -->
-                <p class="text-xl md:text-2xl text-white mb-12 leading-relaxed" style="font-family: 'Great Vibes', cursive;">
-                  You and I, a story still being told,<br>
-                With every smile, our love unfolds.
-                                        </p>
-                
-                <!-- Buttons container -->
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <!-- Read Letter Button -->
-                    <a href="#letter">
-                         <button class="btn-premium px-10 py-4 rounded-full text-white text-lg font-medium bg-gradient-to-r from-pink-500/30 to-purple-500/30">
-                        <i class="fas fa-envelope-open-text mr-2 #letter"></i>
-                        Read Letter
-                        <span class="sparkle" style="top: 20%; left: 20%; animation-delay: 0.3s;"></span>
-                        <span class="sparkle" style="top: 60%; left: 70%; animation-delay: 0.7s;"></span>
-                    </button>
-                    </a>
-                   
-                    
-                    <!-- Memories Button -->
-                    <a href="#story">
-                        <button class="btn-premium px-10 py-4 rounded-full text-white text-lg font-medium bg-gradient-to-r from-purple-500/30 to-blue-500/30">
-                        <i class="fas fa-images mr-2"></i>
-                        Our Story
-                        <span class="sparkle" style="top: 30%; left: 50%; animation-delay: 0.5s;"></span>
-                        <span class="sparkle" style="top: 70%; left: 30%; animation-delay: 0.9s;"></span>
-                    </button>
-                    </a>
-                    
-                </div>
+        <!-- Floating flower petals -->
+        <div class="petal top-1/4 left-1/3 animate-petal-float"></div>
+        <div class="petal top-3/4 right-1/4 animate-petal-float animation-delay-1000"></div>
+        <div class="petal bottom-1/3 left-1/2 animate-petal-float animation-delay-2000"></div>
+        
+        <!-- Main content -->
+        <div class="text-center z-10 px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-purple-200 to-pink-200 animate-glow">
+                Emon & Naima
+            </h1>
+            
+            <div class="typing-container text-2xl md:text-3xl lg:text-4xl font-script text-white mb-10 min-h-[60px]">
+                <span>Our Love Story - Forever United 💕</span>
             </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mt-12">
+                <button class="glass-button px-8 py-4 text-white font-medium text-lg flex items-center justify-center group">
+                    <i class="fas fa-envelope mr-3 text-xl"></i>
+                    Send Love Message
+                    <div class="sparkle ml-2"></div>
+                    <div class="sparkle ml-1"></div>
+                </button>
+                
+                <button class="glass-button px-8 py-4 text-white font-medium text-lg flex items-center justify-center group">
+                    <i class="fas fa-images mr-3 text-xl"></i>
+                    View Our Memories
+                    <div class="sparkle ml-2"></div>
+                    <div class="sparkle ml-1"></div>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-70 flex items-center">
+            <i class="fas fa-heart text-pink-200 animate-pulse mr-2"></i>
+            <span class="font-script text-xl">Forever & Always</span>
+            <i class="fas fa-heart text-pink-200 animate-pulse ml-2"></i>
         </div>
     </section>
 
